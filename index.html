@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- style file -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- font awesome  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>App Weather</title>
+</head>
+<body>
+    <div class="container">
+            <h1 class="title-app">App Weather</h1>
+        <div class="app">
+            <!-- Start header weather -->
+            <div class="header-weather">
+                <div class="search-box">
+                    <input type="text" placeholder="Enter your location" class="location">
+                    <button class="fas fa-magnifying-glass btnSrearch"></button>
+                </div>
+            </div>
+            <!-- End header weather -->
+            <div class="weather-not-location-found">
+                <h1> sorry, location not found !!! </h1>
+                <img  src="asstes/image/404.png" alt="">
+            </div>
+            <div class="weather-found">
+            <!-- Start body weather -->
+            <div class="body-weather">
+                <img class="weatherImg" id="weatherImg" src="asstes/image/clear.png" alt="">
+                <h1 class="title">tit</h1>
+                <div class="weather-box">
+                    <p class="temperature"></p>
+                    <p class="description">line</p>
+                </div>
+                
+                <div class="weather-details">
+                    <div class="humidity">
+                        <i class="fas fa-droplet"></i>
+                        <div class="text">
+                            <span id="humidity">45%</span>
+                            <p>humidity</p>
+                        </div>
+                    </div>
+                    <div class="wind">
+                        <i class="fas fa-wind"></i>
+                        <div class="text">
+                            <span class="wind-speed">12 km-h</span>
+                            <p>Wind speed</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End body weather -->
+        </div>
+    </div>
+    </div>
+    
+    <!-- Script file -->
+    <script src="js/script.js"></script>
+</body>
+</html>

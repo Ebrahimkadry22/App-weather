@@ -1,0 +1,278 @@
+/* google font  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+/* Start globla */
+*,
+::after,
+::before {
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+button ,
+input {
+    border: none;
+    outline: none;
+}
+:root {
+    --primary-color-body : #222831;
+    --secdon-color:#ffffff;
+    --box-shadow:0 3px 10px rgb( 0 0 0 / 0.2);
+}
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--primary-color-body);
+
+}
+.container {
+    margin-top: 15px;
+    height: calc(100vh - 20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.contant-app {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.title-app {
+    color: var(--secdon-color);
+    margin-top:10px;
+}
+
+
+/* End globla */
+/* Start app */
+.app {
+    width: 50%;
+    background-color: var(--primary-color-body);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+}
+/* Start header */
+.header {
+    width: 100%;
+}
+.search-box {
+    width: 100%;
+    height: min-content;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    gap:10px;
+}
+.search-box .location {
+    width: 90%;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    padding: 12px 16px;
+    border-radius: 10px;
+    /* color: var(--primary-color-body); */
+    background-color: #F4F9F9;
+}
+.search-box .location::placeholder {
+    font-size: 1.4rem;
+    font-weight: 200;
+    text-transform:capitalize;
+}
+.search-box button {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border-radius: 50%;
+    transform: scale(1);
+    background-color: #F4F9F9;
+    color: #222831;
+    transition: all .3s ease-in-out;
+}
+.search-box button:hover {
+    transform: scale(1.2);
+    /* background-color: #F4F9F9;  */
+    color: var(--secdon-color);
+    background-color: var(--primary-color-body); 
+}
+/* End header */
+@media (765px<= width <= 1200px) {
+    .container {
+        width:75%;
+        margin:0 auto;
+    }
+    .app {
+        width: 100%;
+    }
+} 
+@media (200px <= width <= 765px) {
+    .title-app {
+        font-size:1.5rem;
+    }
+    .container {
+        width: 90%;
+        margin:0 auto;
+    }
+    .app {
+        width: 100%;
+        padding: 10px;
+    }
+    .search-box .location {
+    padding: 8px 10px;
+    font-size: 1rem;
+
+    }
+.search-box .location::placeholder {
+font-size: 1rem;
+}
+.search-box button {
+    width: 30px;
+    height: 30px;
+    font-size: 1rem;
+}
+
+}
+/*Start body */
+.weather-found {
+    display: none;
+    transition: display.5s ease-in-out;
+}
+.body-weather {
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+.body-weather img {
+    width: 40%;
+    animation: up__down 1s ease-in-out infinite alternate-reverse both ;
+
+}
+.body-weather .title {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-top: 15px;
+    color: var(--secdon-color);
+
+}
+.weather-box {
+    margin:20px 0 ;
+}
+.weather-box .temperature {
+    font-size: 2.8rem;
+    color: var(--secdon-color);
+    font-weight: 500;
+    text-align: center;
+}
+.weather-box .description {
+    font-size: 3.2rem;
+    text-align: center;
+    font-weight: 500;
+    color: var(--secdon-color);
+}
+.weather-details {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.weather-details .humidity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.humidity i {
+    font-size: 2.8rem;
+    color: var(--secdon-color);
+}
+.weather-details .wind {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.wind i {
+    font-size: 2.4rem;
+    color: var(--secdon-color);
+}
+.text span {
+font-size: 1.7rem;
+color: var(--secdon-color);
+font-weight: 500;
+}
+.text p {
+font-size: 1.6rem;
+color: var(--secdon-color);
+font-weight: 500;
+}
+/* End body */
+@media (200px <= width <= 765px) {
+    img {
+    width:50%;
+    }
+    .body-weather .title {
+        font-size: 1.5rem;
+    }
+    .weather-box  {
+        margin:10px 0 ;
+
+    }
+.weather-box .temperature,
+.weather-box .description {
+    font-size: 1.7rem;
+}
+.humidity i ,
+.wind i{
+    font-size: 1.52rem;
+
+}
+.text span ,
+.text p  {
+    font-size: 1.4rem;
+
+}
+
+}
+/* End app */
+/* Start weather location found  */
+.weather-not-location-found {
+    width: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20px 0;
+    position: relative;
+    transition:display .5s ease-in-out;
+    
+}
+.weather-not-location-found h1 {
+    font-size: 2rem;
+    color: var(--secdon-color);
+    margin-bottom: 20px;
+}
+.weather-not-location-found  img {
+    animation: up__down 1s ease-in-out infinite alternate-reverse both ;
+}
+@media (200px <= width <= 765px) {
+    .weather-not-location-found h1 {
+        font-size:1.5rem;
+    }
+}
+@keyframes  up__down {
+    0% {
+        transform:  translateY(-10px) translateX(-10px);
+    }
+    100% {
+        transform: translateY(10px) translateX(10px);
+    }
+    
+}
+/* End weather location found  */
+
